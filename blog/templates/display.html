@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block title %}
+<title>Your Profile</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+<h1> this is display profile page <br>
+  
+                   
+       
+             {% for i in bloginfo %}
+               
+             <div>
+                {{i.title}}<br>
+             </div>
+             
+             {% endfor %}
+           
+      
+
+</div>
+{% endblock content %}

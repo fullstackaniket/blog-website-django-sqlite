@@ -1,0 +1,17 @@
+<div class="row">
+<form  class="col-lg-6 "action="{% url 'like_post' %}" method="post" class="s-content__primary row">
+     {% csrf_token %}
+     {% if is_liked %}
+     <button type="submit" class="btn btn-danger " name="post_id"  id="like"
+                value="{{blog.id}}">Dislike</button>
+     {% else%}
+    <button type="submit" class="btn btn-primary " name="post_id"  id="like"
+                value="{{blog.id}}"> Like  </button>
+     {% endif%}
+    </form>
+
+
+<a class="col-lg-6" href="{% url 'post_edit' blog.id %}" ><button class="btn btn-info l"type="submit" >Edit Post</button></a>
+
+</div>
+
